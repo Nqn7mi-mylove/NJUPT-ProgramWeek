@@ -1,0 +1,15 @@
+debug/adminwindow.o
+debug/changeline.o
+debug/graphview.o
+debug/login.o
+debug/main.o
+debug/mainwindow.o
+debug/searchdialog.o
+debug/searchline.o
+debug/moc_adminwindow.o
+debug/moc_changeline.o
+debug/moc_graphview.o
+debug/moc_login.o
+debug/moc_mainwindow.o
+debug/moc_searchdialog.o
+debug/moc_searchline.o
