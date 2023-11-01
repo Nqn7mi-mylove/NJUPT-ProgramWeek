@@ -1,13 +1,13 @@
 #include "searchdialog.h"
 #include "ui_searchdialog.h"
 
-vector<pair<int,int> > graph[100005];
-map<pair<int,int>,vector<QString> > bel;
-map<int,QString> name;
-int nodes,edges,lines;
-vector<int> ans;
-int mp[200][200],path[200][200];
-stringstream outp;
+vector<pair<int,int> > graph[100005];//地图
+map<pair<int,int>,vector<QString> > bel;//边属于哪一条路线
+map<int,QString> name;//点的编号对应名称
+int nodes,edges,lines;//点数、边数、路线数
+vector<int> ans;//用于记录答案
+int mp[200][200],path[200][200];//用于floyd，存储点到点的距离以及路径
+stringstream outp;//存储输出流
 
 searchDialog::searchDialog(QWidget *parent) :
     QDialog(parent),
@@ -60,17 +60,17 @@ searchDialog::~searchDialog()
 }
 
 
-void searchDialog::on_getStart_selectionChanged()
+void searchDialog::on_getStart_selectionChanged()//选择输入框时清空输入框
 {
     ui->getStart->clear();
 }
 
-void searchDialog::on_getEnd_selectionChanged()
+void searchDialog::on_getEnd_selectionChanged()//选择输入框时清空输入框
 {
     ui->getEnd->clear();
 }
 
-void print(int a,int b)
+void print(int a,int b)//还原路径
 {
     if(path[a][b]==-1) return;
     print(a,path[a][b]);
@@ -78,7 +78,7 @@ void print(int a,int b)
     print(path[a][b],b);
 }
 
-void Debug()
+void Debug()//产生一个输出ok的弹窗，用于debug
 {
     QMessageBox msgBox;
     msgBox.setWindowTitle("OK");
@@ -87,7 +87,7 @@ void Debug()
 }
 
 int chang[200];
-vector<int> dijkstra(int start,int end)
+vector<int> dijkstra(int start,int end)//最短路，计算最少换乘
 {
     memset(chang,1e9+7,sizeof(chang));
     priority_queue<pair<int,pair<vector<int>,pair<int,set<string> > > > > q;
@@ -131,7 +131,7 @@ vector<int> dijkstra(int start,int end)
     return anss;
 }
 
-void searchDialog::on_searchButton_clicked()
+void searchDialog::on_searchButton_clicked()//包括floyd和dijkstra的调用，计算路径
 {
     int start=-1,end=-1;
     for(auto it:name)
