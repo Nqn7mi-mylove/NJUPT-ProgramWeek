@@ -1,4 +1,3 @@
-debug/addstat.o
 debug/adminwindow.o
 debug/changeline.o
 debug/graphview.o
@@ -7,7 +6,6 @@ debug/main.o
 debug/mainwindow.o
 debug/searchdialog.o
 debug/searchline.o
-debug/moc_addstat.o
 debug/moc_adminwindow.o
 debug/moc_changeline.o
 debug/moc_graphview.o

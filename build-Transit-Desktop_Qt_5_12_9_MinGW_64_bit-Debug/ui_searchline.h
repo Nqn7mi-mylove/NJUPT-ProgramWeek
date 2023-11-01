@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
@@ -26,6 +27,7 @@ public:
     QLineEdit *findLine;
     QTextEdit *outLine;
     QPushButton *search;
+    QLabel *label;
 
     void setupUi(QDialog *searchline)
     {
@@ -46,6 +48,9 @@ public:
         search = new QPushButton(searchline);
         search->setObjectName(QString::fromUtf8("search"));
         search->setGeometry(QRect(450, 30, 121, 41));
+        label = new QLabel(searchline);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(570, 370, 91, 16));
 
         retranslateUi(searchline);
         QObject::connect(buttonBox, SIGNAL(accepted()), searchline, SLOT(accept()));
@@ -58,6 +63,7 @@ public:
     {
         searchline->setWindowTitle(QApplication::translate("searchline", "\346\237\245\350\257\242", nullptr));
         search->setText(QApplication::translate("searchline", "\346\237\245\350\257\242", nullptr));
+        label->setText(QApplication::translate("searchline", "by Q21010312", nullptr));
     } // retranslateUi
 
 };

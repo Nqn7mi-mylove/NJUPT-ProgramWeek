@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
@@ -29,6 +30,8 @@ public:
     QPushButton *addButton;
     QPushButton *deleteButton;
     QPushButton *changeButton;
+    QPushButton *help;
+    QLabel *label;
 
     void setupUi(QDialog *changeLine)
     {
@@ -59,6 +62,12 @@ public:
         changeButton = new QPushButton(changeLine);
         changeButton->setObjectName(QString::fromUtf8("changeButton"));
         changeButton->setGeometry(QRect(270, 510, 91, 31));
+        help = new QPushButton(changeLine);
+        help->setObjectName(QString::fromUtf8("help"));
+        help->setGeometry(QRect(490, 30, 141, 41));
+        label = new QLabel(changeLine);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(760, 560, 101, 16));
 
         retranslateUi(changeLine);
         QObject::connect(buttonBox, SIGNAL(accepted()), changeLine, SLOT(accept()));
@@ -74,6 +83,8 @@ public:
         addButton->setText(QApplication::translate("changeLine", "\346\267\273\345\212\240", nullptr));
         deleteButton->setText(QApplication::translate("changeLine", "\345\210\240\351\231\244", nullptr));
         changeButton->setText(QApplication::translate("changeLine", "\344\277\256\346\224\271", nullptr));
+        help->setText(QApplication::translate("changeLine", "\345\270\256\345\212\251", nullptr));
+        label->setText(QApplication::translate("changeLine", "by Q21010312", nullptr));
     } // retranslateUi
 
 };

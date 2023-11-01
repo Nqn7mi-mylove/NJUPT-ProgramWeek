@@ -32,7 +32,10 @@ private slots:
 
     void on_deleteButton_clicked();
 
-    void on_listWidget_currentTextChanged(const QString &currentText);
+
+    void on_help_clicked();
+
+    void on_changeButton_clicked();
 
 private:
     Ui::changeLine *ui;

@@ -30,7 +30,7 @@ public:
     QLabel *label;
     QPushButton *lineSearch;
     QPushButton *help;
-    QPushButton *nanjing;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,7 +38,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(567, 410);
+        MainWindow->resize(567, 253);
         actionHelp = new QAction(MainWindow);
         actionHelp->setObjectName(QString::fromUtf8("actionHelp"));
         centralwidget = new QWidget(MainWindow);
@@ -55,9 +55,9 @@ public:
         help = new QPushButton(centralwidget);
         help->setObjectName(QString::fromUtf8("help"));
         help->setGeometry(QRect(10, 10, 80, 31));
-        nanjing = new QPushButton(centralwidget);
-        nanjing->setObjectName(QString::fromUtf8("nanjing"));
-        nanjing->setGeometry(QRect(90, 230, 381, 41));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(480, 190, 91, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -80,7 +80,7 @@ public:
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:22pt; font-weight:600;\">\345\205\254\345\205\261\344\272\244\351\200\232\345\257\274\350\210\252\347\263\273\347\273\237</span></p></body></html>", nullptr));
         lineSearch->setText(QApplication::translate("MainWindow", "\350\275\246\346\254\241\346\237\245\350\257\242", nullptr));
         help->setText(QApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
-        nanjing->setText(QApplication::translate("MainWindow", "\345\210\207\346\215\242\345\210\260\345\215\227\344\272\254\345\205\254\344\272\244\347\272\277\350\267\257", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "by Q21010312", nullptr));
     } // retranslateUi
 
 };

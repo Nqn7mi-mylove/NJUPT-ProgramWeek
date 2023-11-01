@@ -1,4 +1,3 @@
-release/addstat.o
 release/adminwindow.o
 release/changeline.o
 release/graphview.o
@@ -7,7 +6,6 @@ release/main.o
 release/mainwindow.o
 release/searchdialog.o
 release/searchline.o
-release/moc_addstat.o
 release/moc_adminwindow.o
 release/moc_changeline.o
 release/moc_graphview.o

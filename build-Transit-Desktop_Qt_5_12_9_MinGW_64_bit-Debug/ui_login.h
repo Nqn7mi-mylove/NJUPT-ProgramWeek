@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 
@@ -25,6 +26,7 @@ public:
     QLineEdit *getUser;
     QLineEdit *getPassword;
     QPushButton *help;
+    QLabel *label;
 
     void setupUi(QDialog *Login)
     {
@@ -45,6 +47,9 @@ public:
         help = new QPushButton(Login);
         help->setObjectName(QString::fromUtf8("help"));
         help->setGeometry(QRect(10, 10, 71, 31));
+        label = new QLabel(Login);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(390, 270, 91, 16));
 
         retranslateUi(Login);
         QObject::connect(buttonBox, SIGNAL(rejected()), Login, SLOT(reject()));
@@ -57,6 +62,7 @@ public:
     {
         Login->setWindowTitle(QApplication::translate("Login", "\347\231\273\345\275\225\350\264\246\346\210\267", nullptr));
         help->setText(QApplication::translate("Login", "\345\270\256\345\212\251", nullptr));
+        label->setText(QApplication::translate("Login", "by Q21010312", nullptr));
     } // retranslateUi
 
 };

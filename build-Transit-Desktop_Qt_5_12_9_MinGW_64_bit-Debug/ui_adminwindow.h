@@ -30,7 +30,7 @@ public:
     QPushButton *roadSearch;
     QPushButton *lineSearch;
     QPushButton *help;
-    QPushButton *nanjing;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,7 +38,7 @@ public:
     {
         if (AdminWindow->objectName().isEmpty())
             AdminWindow->setObjectName(QString::fromUtf8("AdminWindow"));
-        AdminWindow->resize(671, 486);
+        AdminWindow->resize(656, 419);
         centralwidget = new QWidget(AdminWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
@@ -59,13 +59,13 @@ public:
         help = new QPushButton(centralwidget);
         help->setObjectName(QString::fromUtf8("help"));
         help->setGeometry(QRect(10, 0, 81, 31));
-        nanjing = new QPushButton(centralwidget);
-        nanjing->setObjectName(QString::fromUtf8("nanjing"));
-        nanjing->setGeometry(QRect(140, 320, 371, 51));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(540, 350, 111, 21));
         AdminWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(AdminWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 671, 21));
+        menubar->setGeometry(QRect(0, 0, 656, 21));
         AdminWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(AdminWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -85,7 +85,7 @@ public:
         roadSearch->setText(QApplication::translate("AdminWindow", "\347\272\277\350\267\257\346\237\245\350\257\242", nullptr));
         lineSearch->setText(QApplication::translate("AdminWindow", "\350\275\246\346\254\241\346\237\245\350\257\242", nullptr));
         help->setText(QApplication::translate("AdminWindow", "\345\270\256\345\212\251", nullptr));
-        nanjing->setText(QApplication::translate("AdminWindow", "\345\210\207\346\215\242\345\210\260\345\215\227\344\272\254\345\205\254\344\272\244\347\272\277\350\267\257", nullptr));
+        label_2->setText(QApplication::translate("AdminWindow", "by Q21010312", nullptr));
     } // retranslateUi
 
 };
