@@ -32,24 +32,24 @@ public:
     {
         if (searchDialog->objectName().isEmpty())
             searchDialog->setObjectName(QString::fromUtf8("searchDialog"));
-        searchDialog->resize(391, 424);
+        searchDialog->resize(954, 471);
         buttonBox = new QDialogButtonBox(searchDialog);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(20, 370, 341, 32));
+        buttonBox->setGeometry(QRect(580, 390, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         getStart = new QLineEdit(searchDialog);
         getStart->setObjectName(QString::fromUtf8("getStart"));
-        getStart->setGeometry(QRect(80, 30, 231, 20));
+        getStart->setGeometry(QRect(70, 70, 231, 20));
         getEnd = new QLineEdit(searchDialog);
         getEnd->setObjectName(QString::fromUtf8("getEnd"));
-        getEnd->setGeometry(QRect(80, 70, 231, 20));
+        getEnd->setGeometry(QRect(70, 140, 231, 20));
         sendRoad = new QTextEdit(searchDialog);
         sendRoad->setObjectName(QString::fromUtf8("sendRoad"));
-        sendRoad->setGeometry(QRect(60, 170, 271, 171));
+        sendRoad->setGeometry(QRect(340, 30, 581, 321));
         searchButton = new QPushButton(searchDialog);
         searchButton->setObjectName(QString::fromUtf8("searchButton"));
-        searchButton->setGeometry(QRect(140, 110, 111, 41));
+        searchButton->setGeometry(QRect(130, 250, 111, 41));
 
         retranslateUi(searchDialog);
         QObject::connect(buttonBox, SIGNAL(accepted()), searchDialog, SLOT(accept()));
