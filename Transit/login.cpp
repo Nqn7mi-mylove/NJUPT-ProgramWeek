@@ -39,3 +39,11 @@ void Login::on_buttonBox_accepted()
         w->show();
     }
 }
+
+void Login::on_help_clicked()
+{
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("帮助");
+    msgBox.setText("输入管理员账号密码进入管理系统，否则进入用户系统。");
+    msgBox.exec();
+}

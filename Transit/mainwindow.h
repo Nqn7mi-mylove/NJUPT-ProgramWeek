@@ -5,6 +5,7 @@
 #include <QMessageBox>
 
 #include "searchdialog.h"
+#include "searchline.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +24,8 @@ private slots:
     void on_help_clicked();
 
     void on_showMap_clicked();
+
+    void on_lineSearch_clicked();
 
 private:
     Ui::MainWindow *ui;

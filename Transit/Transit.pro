@@ -17,25 +17,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     adminwindow.cpp \
+    changeline.cpp \
     graphview.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    searchdialog.cpp
+    searchdialog.cpp \
+    searchline.cpp
 
 HEADERS += \
     adminwindow.h \
+    changeline.h \
     graphview.h \
     login.h \
     mainwindow.h \
-    searchdialog.h
+    searchdialog.h \
+    searchline.h
 
 FORMS += \
     adminwindow.ui \
+    changeline.ui \
     graphview.ui \
     login.ui \
     mainwindow.ui \
-    searchdialog.ui
+    searchdialog.ui \
+    searchline.ui
 
 TRANSLATIONS += \
     Transit_zh_CN.ts

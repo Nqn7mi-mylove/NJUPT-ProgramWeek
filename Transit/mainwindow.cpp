@@ -35,3 +35,9 @@ void MainWindow::on_showMap_clicked()
 {
 
 }
+
+void MainWindow::on_lineSearch_clicked()
+{
+    searchline *searchL=new searchline;
+    searchL->show();
+}

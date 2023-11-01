@@ -8,8 +8,9 @@
 #include <bits/stdc++.h>
 
 
-
+#include "searchline.h"
 #include "searchdialog.h"
+#include "changeline.h"
 
 using namespace std;
 
@@ -29,6 +30,10 @@ private slots:
     void on_roadSearch_clicked();
 
     void on_randomGen_clicked();
+
+    void on_lineSearch_clicked();
+
+    void on_roadChange_clicked();
 
 private:
     Ui::AdminWindow *ui;

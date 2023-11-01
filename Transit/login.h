@@ -25,6 +25,8 @@ private slots:
 
     void on_buttonBox_accepted();
 
+    void on_help_clicked();
+
 private:
     Ui::Login *ui;
 };
