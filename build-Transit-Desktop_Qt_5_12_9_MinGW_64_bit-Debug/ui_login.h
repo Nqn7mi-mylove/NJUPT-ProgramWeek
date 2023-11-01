@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -23,6 +24,7 @@ public:
     QDialogButtonBox *buttonBox;
     QLineEdit *getUser;
     QLineEdit *getPassword;
+    QPushButton *help;
 
     void setupUi(QDialog *Login)
     {
@@ -40,10 +42,13 @@ public:
         getPassword = new QLineEdit(Login);
         getPassword->setObjectName(QString::fromUtf8("getPassword"));
         getPassword->setGeometry(QRect(130, 140, 211, 20));
+        help = new QPushButton(Login);
+        help->setObjectName(QString::fromUtf8("help"));
+        help->setGeometry(QRect(10, 10, 71, 31));
 
         retranslateUi(Login);
-        QObject::connect(buttonBox, SIGNAL(accepted()), Login, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), Login, SLOT(reject()));
+        QObject::connect(buttonBox, SIGNAL(accepted()), Login, SLOT(accept()));
 
         QMetaObject::connectSlotsByName(Login);
     } // setupUi
@@ -51,6 +56,7 @@ public:
     void retranslateUi(QDialog *Login)
     {
         Login->setWindowTitle(QApplication::translate("Login", "\347\231\273\345\275\225\350\264\246\346\210\267", nullptr));
+        help->setText(QApplication::translate("Login", "\345\270\256\345\212\251", nullptr));
     } // retranslateUi
 
 };

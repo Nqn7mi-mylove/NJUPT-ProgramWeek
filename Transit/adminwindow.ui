@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>516</height>
+    <width>671</width>
+    <height>486</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,23 +17,23 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>40</y>
-      <width>541</width>
+      <x>50</x>
+      <y>10</y>
+      <width>721</width>
       <height>151</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;公共交通导航系统-管理员端&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;公共交通导航系统-管理员端&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="randomGen">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>210</y>
+      <x>360</x>
+      <y>240</y>
       <width>151</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -43,10 +43,10 @@
    <widget class="QPushButton" name="roadChange">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>310</y>
+      <x>140</x>
+      <y>240</y>
       <width>151</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -56,10 +56,10 @@
    <widget class="QPushButton" name="roadSearch">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>210</y>
+      <x>360</x>
+      <y>150</y>
       <width>151</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -69,10 +69,10 @@
    <widget class="QPushButton" name="lineSearch">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>310</y>
+      <x>140</x>
+      <y>150</y>
       <width>151</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -92,17 +92,17 @@
      <string>帮助</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="showMap">
+   <widget class="QPushButton" name="nanjing">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>81</width>
-      <height>31</height>
+      <x>140</x>
+      <y>320</y>
+      <width>371</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>地图</string>
+     <string>切换到南京公交线路</string>
     </property>
    </widget>
   </widget>
@@ -111,8 +111,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
-     <height>22</height>
+     <width>671</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

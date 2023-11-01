@@ -7,6 +7,8 @@
 #include <QTextStream>
 #include <QCompleter>
 #include <QMessageBox>
+#include <QListWidget>
+#include <QInputDialog>
 
 using namespace std;
 
@@ -21,6 +23,16 @@ class changeLine : public QDialog
 public:
     explicit changeLine(QWidget *parent = nullptr);
     ~changeLine();
+    void addItem();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_addButton_clicked();
+
+    void on_deleteButton_clicked();
+
+    void on_listWidget_currentTextChanged(const QString &currentText);
 
 private:
     Ui::changeLine *ui;

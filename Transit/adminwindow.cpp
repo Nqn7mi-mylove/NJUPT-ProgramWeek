@@ -111,3 +111,11 @@ void AdminWindow::on_roadChange_clicked()
     changeLine *changeL=new changeLine;
     changeL->show();
 }
+
+void AdminWindow::on_help_clicked()
+{
+    QMessageBox msgBox;
+    msgBox.setText("点击随机生成可以随机生成一张带时间的公交线路图，站名取自现实站名。");
+    msgBox.setWindowTitle("帮助");
+    msgBox.exec();
+}

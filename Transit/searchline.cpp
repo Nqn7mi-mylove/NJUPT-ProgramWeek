@@ -62,7 +62,6 @@ void searchline::on_search_clicked()
     }
     int cnt=0;
     stringstream outt;
-    cout<<gra.size()<<endl;
     for(auto it:gra[x])
     {
         if(cnt==0)

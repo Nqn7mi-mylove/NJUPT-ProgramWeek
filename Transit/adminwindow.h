@@ -35,6 +35,8 @@ private slots:
 
     void on_roadChange_clicked();
 
+    void on_help_clicked();
+
 private:
     Ui::AdminWindow *ui;
 };

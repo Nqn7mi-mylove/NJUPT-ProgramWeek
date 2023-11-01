@@ -30,7 +30,7 @@ public:
     QLabel *label;
     QPushButton *lineSearch;
     QPushButton *help;
-    QPushButton *showMap;
+    QPushButton *nanjing;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,30 +38,30 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(567, 410);
         actionHelp = new QAction(MainWindow);
         actionHelp->setObjectName(QString::fromUtf8("actionHelp"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         roadSearch = new QPushButton(centralwidget);
         roadSearch->setObjectName(QString::fromUtf8("roadSearch"));
-        roadSearch->setGeometry(QRect(310, 230, 151, 41));
+        roadSearch->setGeometry(QRect(90, 130, 151, 41));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(200, 110, 491, 51));
+        label->setGeometry(QRect(150, 50, 491, 51));
         lineSearch = new QPushButton(centralwidget);
         lineSearch->setObjectName(QString::fromUtf8("lineSearch"));
-        lineSearch->setGeometry(QRect(310, 320, 151, 41));
+        lineSearch->setGeometry(QRect(320, 130, 151, 41));
         help = new QPushButton(centralwidget);
         help->setObjectName(QString::fromUtf8("help"));
         help->setGeometry(QRect(10, 10, 80, 31));
-        showMap = new QPushButton(centralwidget);
-        showMap->setObjectName(QString::fromUtf8("showMap"));
-        showMap->setGeometry(QRect(310, 410, 151, 41));
+        nanjing = new QPushButton(centralwidget);
+        nanjing->setObjectName(QString::fromUtf8("nanjing"));
+        nanjing->setGeometry(QRect(90, 230, 381, 41));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 567, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -80,7 +80,7 @@ public:
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:22pt; font-weight:600;\">\345\205\254\345\205\261\344\272\244\351\200\232\345\257\274\350\210\252\347\263\273\347\273\237</span></p></body></html>", nullptr));
         lineSearch->setText(QApplication::translate("MainWindow", "\350\275\246\346\254\241\346\237\245\350\257\242", nullptr));
         help->setText(QApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
-        showMap->setText(QApplication::translate("MainWindow", "\345\234\260\345\233\276\345\261\225\347\244\272", nullptr));
+        nanjing->setText(QApplication::translate("MainWindow", "\345\210\207\346\215\242\345\210\260\345\215\227\344\272\254\345\205\254\344\272\244\347\272\277\350\267\257", nullptr));
     } // retranslateUi
 
 };
