@@ -1,9 +1,9 @@
 #include "searchline.h"
 #include "ui_searchline.h"
 
-int node,line;
-map<int,QString> nam;
-map<QString,vector<pair<pair<int,int>,int> > > gra;
+int node,line;//点数和路线数
+map<int,QString> nam;//点的编号对应名称
+map<QString,vector<pair<pair<int,int>,int> > > gra;//路线名对应该路线上的所有边
 
 searchline::searchline(QWidget *parent) :
     QDialog(parent),
@@ -49,7 +49,7 @@ searchline::~searchline()
     delete ui;
 }
 
-void searchline::on_search_clicked()
+void searchline::on_search_clicked()//查找线路，直接从gra中取出
 {
     QString x=ui->findLine->text();
     if(gra.find(x)==gra.end())

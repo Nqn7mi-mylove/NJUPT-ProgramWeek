@@ -1,9 +1,9 @@
 #include "changeline.h"
 #include "ui_changeline.h"
 
-int nod,lin;
-map<int,QString> na;
-map<QString,vector<pair<pair<int,int>,int> > > gr;
+int nod,lin;//点数、线路数
+map<int,QString> na;//点的编号对应名称
+map<QString,vector<pair<pair<int,int>,int> > > gr;//路线名对应该路线所有站点和边
 QString inp;
 QListWidgetItem *item;
 
@@ -50,7 +50,7 @@ changeLine::~changeLine()
     delete ui;
 }
 
-void saveallchange()
+void saveallchange()//保存所有的已有更改
 {
     QFile file("graph.txt");
     if(!file.open(QIODevice::WriteOnly))
@@ -71,7 +71,7 @@ void saveallchange()
 
 }
 
-void changeLine::on_pushButton_clicked()
+void changeLine::on_pushButton_clicked()//查询路线
 {
     ui->listWidget->clear();
     QString x=ui->findLine->text();
@@ -96,7 +96,7 @@ void changeLine::on_pushButton_clicked()
     }
 }
 
-void changeLine::on_addButton_clicked()
+void changeLine::on_addButton_clicked()//增加站
 {
     if(ui->findLine->text().isEmpty()) return;
     bool flag=0,p=1;
@@ -147,7 +147,7 @@ void changeLine::on_addButton_clicked()
     saveallchange();
 }
 
-void changeLine::on_deleteButton_clicked()
+void changeLine::on_deleteButton_clicked()//删除站点
 {
     if(ui->findLine->text().isEmpty()) return;
     QMessageBox msgBox;
@@ -202,7 +202,7 @@ void changeLine::on_help_clicked()
     msgBox.exec();
 }
 
-void changeLine::on_changeButton_clicked()
+void changeLine::on_changeButton_clicked()//更改站名
 {
     if(ui->findLine->text().isEmpty()) return;
     QMessageBox msgBox;
