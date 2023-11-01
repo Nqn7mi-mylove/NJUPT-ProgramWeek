@@ -36,8 +36,8 @@ void AdminWindow::on_randomGen_clicked()
             return;
         }
         QTextStream oup(&file);
-        int nodes=rand()%20+20;
-        int lines=rand()%5+5;
+        int nodes=rand()%50+100;
+        int lines=rand()%10+20;
         oup<<nodes<<" "<<lines<<endl;
         QString s="南医大二附院总站安德门,能仁里,雨花西路,窑湾街,钓鱼台,中山南路·新桥,中山南路·升州路,三元巷,新街口南,新街口北,中山路·珠江路北,中山北路·鼓楼,中山北路·大方巷,山西路,中山北路·虹桥,中山北路·三牌楼,萨家湾,南医二附院东院,盐仓桥广场西,挹江门,热河南路,南医大二附院,姜家圩,姜家园南,南医大二附院总站,丁家庄九乡河西路,信息学院,文澜路东,紫金学院,文澜路·南工院西,邮电大学北,学海路,文澜路北,文澜路,文澜路南,亚东新城区,文苑路西,仙隐北路,雁鸣山庄,亚东花园城,尧胜村,仙尧路·尧胜村,花卉物流中心,海子口,尧化门西,金尧山庄,丁家庄,";
         vector<QString> vs;
@@ -76,6 +76,9 @@ void AdminWindow::on_randomGen_clicked()
                 vAllIndices[idx]=vAllIndices.back();
                 vAllIndices.pop_back();
             }
+            QString randomLine="";
+            randomLine=randomLine+char(rand()%26+'a')+char(rand()%10+'0');
+            if(rand()%2) randomLine=randomLine+char(rand()%10+'0');
             for(int j=0;j<length-1;j++)
             {
                 int x=vAvailableIndices[j]+1,y=vAvailableIndices[j+1]+1;
@@ -83,13 +86,15 @@ void AdminWindow::on_randomGen_clicked()
                 {
                     lenc[make_pair(x,y)]=lenc[make_pair(y,x)]=rand()%20+5;
                 }
-                oup<<x<<","<<y<<","<<lenc[make_pair(x,y)]<<","<<i+1<<endl;
+
+                oup<<x<<" "<<y<<" "<<lenc[make_pair(x,y)]<<" "<<randomLine<<endl;
             }
         }
         file.close();
         QMessageBox msgBoxYes;
         string msg="生成成功！本次生成了";
-        msg=msg+char(nodes/10+'0');
+        msg=msg+char(nodes/100+'0');
+        msg=msg+char(nodes/10%10+'0');
         msg=msg+char(nodes%10+'0');
         msg=msg+"个点的公交网络。";
         msgBoxYes.setText(msg.c_str());

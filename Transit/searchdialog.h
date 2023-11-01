@@ -5,6 +5,12 @@
 #include <QApplication>
 #include <QLineEdit>
 #include <QCompleter>
+#include <bits/stdc++.h>
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
+
+using namespace std;
 
 namespace Ui {
 class searchDialog;
@@ -23,6 +29,8 @@ private slots:
     void on_getStart_selectionChanged();
 
     void on_getEnd_selectionChanged();
+
+    void on_searchButton_clicked();
 
 private:
     Ui::searchDialog *ui;

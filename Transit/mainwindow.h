@@ -2,12 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <bits/stdc++.h>
 #include <QMessageBox>
 
 #include "searchdialog.h"
-
-using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
